@@ -268,7 +268,7 @@ body {
     background-color: #11172b00; /* Cor de fundo dos quadrados */
     border-radius: 10px;
     text-align: justify;
-    border: 0.3px solid #2e2e2e; /* Define a cor da borda e a espessura */
+    border: 0.3px solid #ffffff; /* Define a cor da borda e a espessura */
 }
 
 .pontuacao-imagem {
