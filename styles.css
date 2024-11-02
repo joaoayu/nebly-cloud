@@ -285,7 +285,7 @@ body {
 
 .cada-pontuacao {
     margin-left: 100px; /* Alinhamento à esquerda */
-    margin-top: 40px; /* Distância do conteúdo acima */
+    margin-top: 15em; /* Distância do conteúdo acima */
     color: white;
 }
 
@@ -391,3 +391,4 @@ body {
     width: 20px; /* Tamanho dos ícones das redes sociais */
     height: 20px;
 }
+
