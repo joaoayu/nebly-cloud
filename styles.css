@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: "Reddit Sans", sans-serif;
     color: white;
-    background-color: #060B19;
+    background: linear-gradient(135deg, #060B19 60%, rgb(24, 47, 110) 100%); /* Degradê do canto superior esquerdo ao inferior direito */
 }
 
 .navbar {
@@ -30,12 +30,35 @@ body {
 }
 
 .menu li {
+    position: relative; /* Para o pseudo-elemento */
     margin: 0 15px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
+    padding: 5px 0; /* Espaço para o traço */
+    transition: color 0.3s ease; /* Animação de cor ao passar o mouse */
+}
+
+.menu a:hover {
+    color: #ffffff; /* Cor diferente ao passar o mouse */
+}
+
+.menu li::after {
+    content: ""; /* Pseudo-elemento vazio para o traço */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px; /* Espessura do traço */
+    background-color: #ffffff; /* Cor do traço */
+    transform: scaleX(0); /* Inicia o traço invisível */
+    transition: transform 0.3s ease; /* Animação ao aparecer */
+}
+
+.menu li:hover::after {
+    transform: scaleX(1); /* Expande o traço ao passar o mouse */
 }
 
 .menu-img {
@@ -176,7 +199,7 @@ body {
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     font-family: "Poppins";
     margin-right: 50px; /* Aumenta a distância do botão para a direita */
-    font-weight: 100; 
+    font-weight: 200; 
     border: 0.3px solid #ffffff; /* Define a cor da borda e a espessura */
 }
 .cada-pontuacao {
